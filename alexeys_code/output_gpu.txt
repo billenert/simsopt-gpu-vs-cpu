@@ -1,0 +1,7 @@
+omega= 32935.740465336436
+Error in |B| interpolation (5.166218047334621e-05, 6.71802526625959e-05)
+tracing particles
+starting particle tracing kernel
+tracing kernels time (ms): 50692.1
+Number of particles= 5000
+Loss fraction: 0.026
