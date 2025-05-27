@@ -9,7 +9,7 @@
 #SBATCH -J cpu_test
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=64
-#SBATCH --output=output.txt
+#SBATCH --output=output_cpu.txt
 
 module load conda cray-hdf5-parallel cray-netcdf-hdf5parallel
 conda activate gpu_orm_minimal
