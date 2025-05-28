@@ -25,7 +25,7 @@ start_time = time.time()
 
 parser = argparse.ArgumentParser(description='Trace lost trajectories with optional parameters')
 parser.add_argument('--only_first_10_IC', action='store_true', help='Use only the first 10 initial conditions')
-parser.add_argument('-m', '--modemulti', type=float)
+parser.add_argument('-m', '--modemulti', type=float,default=0.0)
 args = parser.parse_args()
 only_first_10_IC = args.only_first_10_IC
 bump_multi = args.modemulti
@@ -42,6 +42,7 @@ first_thread = (comm.rank == 0) or single_thread
 
 max_t_seconds = 1e-3
 boozmn_filename = 'boozmn_qhb_100.nc'
+
 saw_file = 'mode/scaled_mode_32.935kHz.npy'
 ic_folder = 'initial_conditions/first10' if only_first_10_IC else 'initial_conditions'
 s_init = np.loadtxt(f'{ic_folder}/s0.txt', ndmin=1)
@@ -95,6 +96,10 @@ if first_thread:
     theta_init = np.loadtxt(f'{ic_folder}/theta0.txt', ndmin=1)
     zeta_init = np.loadtxt(f'{ic_folder}/zeta0.txt', ndmin=1)
     vpar_init = np.loadtxt(f'{ic_folder}/vpar0.txt', ndmin=1)
+    s_init = s_init[:1]
+    theta_init = theta_init[:1]
+    zeta_init = zeta_init[:1]
+    vpar_init = vpar_init[:1]
     points = np.zeros((s_init.size, 3))
     points[:, 0] = s_init
     points[:, 1] = theta_init
