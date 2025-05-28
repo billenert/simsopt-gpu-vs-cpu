@@ -1,0 +1,7 @@
+[nid006049:914973] mca_base_component_repository_open: unable to open mca_btl_openib: /usr/lib64/libnl-3.so.200: version `libnl_3_5' not found (required by /global/homes/b/billert/.conda/envs/gpu_orm_minimal/lib/openmpi/.././libnl-route-3.so.200) (ignored)
+Traceback (most recent call last):
+  File "/pscratch/sd/b/billert/2025_summer/gpu-vs-cpu/tracing_unpeturbed.py", line 89, in <module>
+    field = InterpolatedBoozerField(bri, degree, srange, thetarange, zetarange, True, nfp=nfp, stellsym=True, initialize=initialize, extrapolate=True)
+TypeError: InterpolatedBoozerField.__init__() got multiple values for argument 'extrapolate'
+srun: error: nid006049: task 0: Exited with exit code 1
+srun: Terminating StepId=39074925.0

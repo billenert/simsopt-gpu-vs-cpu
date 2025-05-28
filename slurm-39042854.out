@@ -1,9 +1,0 @@
-
-EnvironmentNameNotFound: Could not find conda environment: simsopt_gpu
-You can list all discoverable environments with `conda info --envs`.
-
-
-  File "gpu_tracing.py", line 43
-    s_init = np.loadtxt(f'{ic_folder}/s0.txt', ndmin=1)
-                                            ^
-SyntaxError: invalid syntax

@@ -13,4 +13,4 @@
 
 module load conda cray-hdf5-parallel cray-netcdf-hdf5parallel
 conda activate gpu_orm_minimal
-srun --mpi=pmix_v4 --cpu-bind=cores python -u tracing_cpu.py
+srun --mpi=pmix_v4 --cpu-bind=cores python -u tracing_unpeturbed.py

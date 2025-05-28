@@ -94,10 +94,10 @@ charge=ALPHA_PARTICLE_CHARGE # Alpha particle charge
 vpar0=np.sqrt(2*Ekin/mass)
 
 # mu0_vals    = np.loadtxt('mu0.txt')      # Magnetic moment initial values, if needed later
-s0_vals     = np.loadtxt('./initial conditions/s0.txt')       # s-coordinate initial values
-theta0_vals = np.loadtxt('./initial conditions/theta0.txt')   # θ-coordinate initial values
-vpar0_vals  = np.loadtxt('./initial conditions/vpar0.txt')    # v_parallel initial values
-zeta0_vals  = np.loadtxt('./initial conditions/zeta0.txt')    # ζ-coordinate initial values
+s0_vals     = np.loadtxt('s0.txt')       # s-coordinate initial values
+theta0_vals = np.loadtxt('theta0.txt')   # θ-coordinate initial values
+vpar0_vals  = np.loadtxt('vpar0.txt')    # v_parallel initial values
+zeta0_vals  = np.loadtxt('zeta0.txt')    # ζ-coordinate initial values
 
 NParticles = 5000 # 5000 used for production runs
 #np.random.seed(1)
